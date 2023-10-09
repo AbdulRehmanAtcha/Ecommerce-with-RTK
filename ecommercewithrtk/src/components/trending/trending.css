@@ -1,0 +1,32 @@
+.trending-main {
+  min-height: 45vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mainBg);
+  /* flex-wrap: wrap; */
+}
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+
+.swiper-slide {
+  /* font-size: 18px; */
+  background: transparent;
+  color: var(--fontBasicColor);
+  height: 350px !important;
+  border-radius: 8px;
+  border: 1px solid red;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column;
+}
+.swiper-slide h1 {
+  font-size: 10px !important;
+}
+.swiper-slide img {
+  width: 50% !important;
+  height: 50% !important;
+}
