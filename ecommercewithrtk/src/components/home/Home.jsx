@@ -12,7 +12,7 @@ const Home = () => {
         ]}
         typeSpeed={100}
         backSpeed={50}
-        loop
+        loop={false}
       />
     </div>
   );

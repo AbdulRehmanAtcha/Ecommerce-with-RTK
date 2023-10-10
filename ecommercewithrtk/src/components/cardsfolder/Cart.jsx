@@ -86,14 +86,17 @@ export default function Cart() {
                         <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
                           <p>
                             <strong>
-                              {eachProduct.name} (x{eachProduct.quantity})
+                              {eachProduct.name}{" "}
+                              <span style={{ color: "red" }}>
+                                (x{eachProduct.quantity})
+                              </span>
                             </strong>
                           </p>
 
                           <button
                             onClick={() => dispatch(deleteProduct(eachProduct))}
                             style={{
-                              backgroundColor: "#386BC0",
+                              backgroundColor: "red",
                               width: "45px",
                               borderRadius: "4px",
                               border: "none",
@@ -110,12 +113,12 @@ export default function Cart() {
                           >
                             <button
                               style={{
-                                backgroundColor: "#386BC0",
+                                backgroundColor: "#f23d3d",
                                 width: "45px",
                                 borderRadius: "4px",
                                 border: "none",
                                 height: "35px",
-                                marginRight:"10px"
+                                marginRight: "10px",
                               }}
                               onClick={() => dispatch(decrement(eachProduct))}
                             >
@@ -123,7 +126,7 @@ export default function Cart() {
                             </button>
                             <button
                               style={{
-                                backgroundColor: "#386BC0",
+                                backgroundColor: "#127531",
                                 width: "45px",
                                 borderRadius: "4px",
                                 border: "none",
