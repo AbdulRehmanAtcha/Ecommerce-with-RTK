@@ -8,10 +8,10 @@
   --mainBg: #333333;
 }
 .section-title {
-  min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--mainBg);
   color: var(--fontBasicColor);
+  padding-top: 20px;
 }

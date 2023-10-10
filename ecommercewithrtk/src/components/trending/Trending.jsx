@@ -2,15 +2,21 @@ import React from "react";
 import "./trending.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useDispatch } from "react-redux";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
+import { trendingProducts } from "../../constants";
+import { addToCart } from "../../features/mySlice";
+import numeral from "numeral";
 
 const Trending = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <div className="section-title">
@@ -41,74 +47,26 @@ const Trending = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination]}
-          controller={false}
+          modules={[Autoplay, Pagination]}
+          controller={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           className="mySwiper"
         >
-          <div className="slide">
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2022/11/Dazzler-1-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
-          <div className="slide">
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2022/11/Aviator-Bora-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
-          <div className="slide">
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2022/11/Cruch-Front-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
-          <div className="slide">
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2023/03/ZESTRO-Extreme-PC-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
-          <div className="slide">
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2022/11/Punk-Front-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
-          <div className="slide">
-            {" "}
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2022/11/Lian-Li-O11-Dynamic-1-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
-          <div className="slide">
-            <SwiperSlide>
-              <h1>Slide 1</h1>
-              <img
-                src="https://zestrogaming.com/wp-content/uploads/2022/11/Thunder-Lancer-Case-11-618x618.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </div>
+          {trendingProducts.map((eachcard, index) => (
+            <div className="slide" key={eachcard.id}>
+              <SwiperSlide>
+                <h1>{eachcard.name}</h1>
+                <img src={eachcard.imgLink} alt="" />
+                <h2>Rs: {numeral(eachcard.price).format("0,0.00")}</h2>
+                <button onClick={() => dispatch(addToCart(eachcard))}>
+                  Add to Cart
+                </button>
+              </SwiperSlide>
+            </div>
+          ))}
         </Swiper>
       </div>
     </div>

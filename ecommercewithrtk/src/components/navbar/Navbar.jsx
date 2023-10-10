@@ -1,27 +1,42 @@
-import React from "react";
-import "./navbar.css";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getCartTotal } from "../../features/mySlice";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+function TextLinkExample() {
+  const { cart } = useSelector((data) => data.name);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [cart, dispatch]);
   return (
-    <nav>
-      <div className="nav-left">
-        <h1>Logo</h1>
-      </div>
-      <div className="nav-mid">
-        <ul>
-            <li>Home</li>
-            <li>Trending</li>
-            <li>Build Your Pc</li>
-            <li>Accessories</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-        </ul>
-      </div>
-      <div className="nav-right">
-        
-      </div>
-    </nav>
+    <Navbar className="bg-danger fixed-top">
+      <Container>
+        <Navbar.Brand href="#home" text="light">
+          Navbar with text
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <NavLink to={"/cart"}>
+            <Navbar.Text>
+              <Button variant="light">
+                Cart
+                <Badge bg="light" text="dark">
+                  {cart.length}
+                </Badge>
+                <span className="visually-hidden">unread messages</span>
+              </Button>
+            </Navbar.Text>
+          </NavLink>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
-export default Navbar;
+export default TextLinkExample;

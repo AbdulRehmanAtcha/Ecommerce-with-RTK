@@ -13,20 +13,39 @@
 
 .swiper-slide {
   /* font-size: 18px; */
-  background: transparent;
+  background: #282828;
+
   color: var(--fontBasicColor);
   height: 350px !important;
   border-radius: 8px;
-  border: 1px solid red;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column;
+  cursor: pointer;
+}
+.swiper-slide:hover {
+  background-color: #585858;
 }
 .swiper-slide h1 {
-  font-size: 10px !important;
+  font-size: 20px !important;
+  text-align: center;
 }
 .swiper-slide img {
   width: 50% !important;
   height: 50% !important;
+}
+.swiper-slide button {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  color: aliceblue;
+}
+.swiper-slide button:hover {
+  background-color: rgb(245, 45, 45);
+}
+.swiper-pagination-bullet {
+  display: none !important;
 }

@@ -1,5 +1,5 @@
 .home-main {
-  height: 97vh;
+  height: 99vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +13,7 @@
   align-items: center;
   color: aliceblue;
   font-size: 2.5rem;
+  padding-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
