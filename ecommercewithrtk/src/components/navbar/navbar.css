@@ -1,36 +1,8 @@
-/* nav {
-  height: auto;
-  background-color: #1a1a1a;
-  color: var(--fontBasicColor);
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw !important;
+.cart-button{
+  width: 150px !important;
 }
-nav .nav-left {
-  width: 15%;
-  display: flex;
-  justify-content: center;
+.button-badge{
+  color: black !important;
+  font-size: 10px !important;
+  font-weight: bolder !important;
 }
-nav .nav-left h1 {
-  font-size: 2.5rem;
-}
-nav .nav-mid {
-  border: 1px solid white;
-  width: 50%;
-}
-nav .nav-mid ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-nav .nav-mid ul li{
-    font-size: 1.5rem;
-}
-nav .nav-right{
-  border: 1px solid rgb(255, 0, 0);
-  width: 15%;
-}
- */

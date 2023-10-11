@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { cart: [], totalQuantity: 0, totalPrice: 0 };
+const initialState = {
+  cart: [],
+  totalQuantity: 0,
+  totalPrice: 0,
+  userData: [],
+  isLogin: false,
+  isRegister: false,
+};
 
 export const eStoreSlice = createSlice({
   name: "eStoreSlice",
@@ -37,11 +44,12 @@ export const eStoreSlice = createSlice({
       state.totalQuantity = totalQuantity;
     },
     deleteProduct: (state, action) => {
-      state.cart = state.cart.filter(
-        (item) =>
-          item.id !== action.payload.id &&
-          item.category === action.payload.category
-      );
+      state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+      // state.cart = state.cart.filter(
+      //   (item) =>
+      //     item.id !== action.payload.id &&
+      //     item.category === action.payload.category
+      // );
     },
     increment: (state, action) => {
       for (var i = 0; i < state.cart.length; i++) {
@@ -55,15 +63,10 @@ export const eStoreSlice = createSlice({
     },
     decrement: (state, action) => {
       for (var i = 0; i < state.cart.length; i++) {
-        if (
-          state.cart[i].category === action.payload.category &&
-          state.cart[i].id === action.payload.id
-        ) {
+        if (state.cart[i].id === action.payload.id) {
           if (state.cart[i].quantity === 1) {
             state.cart = state.cart.filter(
-              (item) =>
-                item.id !== action.payload.id &&
-                item.category === action.payload.category
+              (item) => item.id !== action.payload.id
             );
           } else {
             state.cart[i].quantity = state.cart[i].quantity - 1;
@@ -71,10 +74,39 @@ export const eStoreSlice = createSlice({
         }
       }
     },
+    signup: (state, action) => {
+      const filter = state.userData.findIndex(
+        (item) => item.email === action.payload.email
+      );
+      if (filter < 0) {
+        state.isRegister = true;
+        state.userData.push(action.payload);
+      } else {
+        alert("Email Already Registered");
+        state.isRegister = false;
+      }
+    },
+    login: (state, action) => {
+      for (var i = 0; i < state.userData.length; i++) {
+        if (
+          state.userData[i].email === action.payload.email &&
+          state.userData[i].password === action.payload.password
+        ) {
+          state.isLogin = true;
+        }
+      }
+    },
   },
 });
 
-export const { addToCart, getCartTotal, deleteProduct, increment, decrement } =
-  eStoreSlice.actions;
+export const {
+  addToCart,
+  getCartTotal,
+  deleteProduct,
+  increment,
+  decrement,
+  signup,
+  login,
+} = eStoreSlice.actions;
 
 export default eStoreSlice.reducer;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./trending.css";
+import "../trending/trending.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,12 +10,12 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-import { trendingProducts } from "../../constants";
 import { addToCart } from "../../features/mySlice";
 import numeral from "numeral";
 import { useNavigate } from "react-router-dom";
+import { processorProducts } from "../../constants";
 
-const Trending = () => {
+const Processor = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ const Trending = () => {
   return (
     <div>
       <div className="section-title">
-        <h1>Trending Products</h1>
+        <h1>Processors</h1>
       </div>
       <div className="container-fluid trending-main">
         <Swiper
@@ -62,12 +62,12 @@ const Trending = () => {
           modules={[Autoplay, Pagination]}
           controller={true}
           autoplay={{
-            delay: 3000,
+            delay: 3400,
             disableOnInteraction: false,
           }}
           className="mySwiper"
         >
-          {trendingProducts.map((eachcard, index) => (
+          {processorProducts.map((eachcard, index) => (
             <div className="slide" key={eachcard.id}>
               <SwiperSlide>
                 <h1>{eachcard.name}</h1>
@@ -85,4 +85,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Processor;
