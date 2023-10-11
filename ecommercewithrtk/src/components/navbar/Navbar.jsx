@@ -15,10 +15,14 @@ function TextLinkExample() {
     dispatch(getCartTotal());
   }, [cart, dispatch]);
   return (
-    <Navbar className="bg-danger fixed-top">
+    <Navbar className="fixed-top" style={{ backgroundColor: "#141c33" }}>
       <Container>
-        <Navbar.Brand href="#home" text="light">
-          Navbar with text
+        <Navbar.Brand href="#home" style={{ color: "white" }}>
+          <img
+            src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/2/8637224002_7dc2eb6a-6e02-4673-9e2d-f554e56133ae.png?cb=1697021985"
+            alt="Logo"
+            height={"50px"}
+          />
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
