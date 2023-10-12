@@ -1,0 +1,72 @@
+.brands-main {
+  min-height: 40vh;
+  background-color: var(--mainBg);
+  padding-bottom: 20px;
+}
+.brands-main .section-title h2 {
+  color: #ffffff00;
+  font-size: 3.5rem;
+  font-weight: 700;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #ff000e;
+  stroke: #ff000e;
+  text-align: center;
+}
+.brands-back {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brands-back-image {
+  height: 100%;
+  background-image: url(https://zestrogaming.com/wp-content/uploads/2023/04/partners-1024x323-1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.our-features {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw !important;
+}
+
+.features-card {
+  width: 20vw;
+  height: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+  background-color: var(--fontBasicColor);
+  border-radius: 8px;
+  box-shadow: -1px 1px 15px 11px rgba(31, 29, 29, 0.48);
+  -webkit-box-shadow: -1px 1px 15px 11px rgba(31, 29, 29, 0.48);
+  -moz-box-shadow: -1px 1px 15px 11px rgba(31, 29, 29, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.features-card h2,
+.features-card p {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .our-features {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .features-card {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 767px) {
+  .features-card {
+    width: 25%;
+  }
+}

@@ -10,7 +10,13 @@ function Modal2() {
 
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
         <Modal.Body>
           Please Login First <br /> <NavLink to={"/login"}>Click Here</NavLink>
         </Modal.Body>

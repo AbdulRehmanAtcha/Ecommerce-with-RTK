@@ -40,6 +40,9 @@ function App() {
           <Route path="*" element={<Packet />} />
         </Routes>
       )}
+      {/* <Packet />
+      <OurBrands />
+      <Reviews /> */}
     </div>
   );
 }

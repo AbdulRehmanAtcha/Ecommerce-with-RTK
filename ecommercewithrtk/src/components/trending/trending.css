@@ -13,9 +13,10 @@
 
 .swiper-slide {
   /* font-size: 18px; */
-  background: #282828;
+  background: transparent;
+  border: 1px solid white;
 
-  color: var(--fontBasicColor);
+  color: rgb(255, 255, 255);
   height: 350px !important;
   border-radius: 8px;
   display: flex !important;
@@ -25,7 +26,10 @@
   cursor: pointer;
 }
 .swiper-slide:hover {
-  background-color: #585858;
+  transition: background 0.4s ease-in-out;
+  /* background-color: #E5E5E5; */
+  background-color: #181d35;
+  color: rgb(255, 255, 255);
 }
 .swiper-slide h1 {
   font-size: 20px !important;

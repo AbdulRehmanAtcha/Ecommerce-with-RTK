@@ -5,7 +5,7 @@
 :root {
   --navback: #001f3f;
   --fontBasicColor: #ffffff;
-  --mainBg: #333333;
+  --mainBg: #00001D;
 }
 .section-title {
   display: flex;
@@ -14,4 +14,20 @@
   background-color: var(--mainBg);
   color: var(--fontBasicColor);
   padding-top: 20px;
+}
+.section-title h1 {
+  color: #ffffff00;
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #ff000e;
+  stroke: #ff000e;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (max-width:590px) {
+  .section-title h1{
+    font-size: 2rem;
+  }
 }

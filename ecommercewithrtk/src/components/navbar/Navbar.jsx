@@ -8,10 +8,6 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
   MDBCollapse,
 } from "mdb-react-ui-kit";
 import Badge from "react-bootstrap/Badge";
@@ -25,9 +21,19 @@ export default function App() {
   const { cart } = useSelector((data) => data.name);
 
   return (
-    <MDBNavbar expand="lg" light bgColor="danger" className="fixed-top">
+    <MDBNavbar
+      expand="lg"
+      className="fixed-top"
+      style={{ backgroundColor: "black" }}
+    >
       <MDBContainer fluid>
-        <MDBNavbarBrand href="#">Brand</MDBNavbarBrand>
+        <MDBNavbarBrand href="#" style={{ color: "white" }}>
+          <img
+            src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/968/8639054968_74b0afe5-14da-4bba-b858-08fb7807eae7.png?cb=1697099780"
+            alt="Logo"
+            style={{ height: "45px" }}
+          />
+        </MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
@@ -41,15 +47,17 @@ export default function App() {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="#">
-                Home
-              </MDBNavbarLink>
+              <MDBNavbarLink
+                active
+                aria-current="page"
+                href="#"
+              ></MDBNavbarLink>
             </MDBNavbarItem>
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBNavbarLink href="#">Link</MDBNavbarLink>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
 
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a" className="nav-link" role="button">
                   Dropdown
@@ -60,9 +68,9 @@ export default function App() {
                   <MDBDropdownItem link>Something else here</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
 
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBNavbarLink
                 disabled
                 href="#"
@@ -71,7 +79,7 @@ export default function App() {
               >
                 Disabled
               </MDBNavbarLink>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
           </MDBNavbarNav>
           <NavLink to="/cart">
             <Button variant="light" className="cart-button">

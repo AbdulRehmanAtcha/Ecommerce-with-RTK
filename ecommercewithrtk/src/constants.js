@@ -68,7 +68,7 @@ export const motherboardProducts = [
   {
     id: 8,
     imgLink: "https://i.ibb.co/9bpZXZX/ASRock-Z790-Steel-Legend-MB3.png",
-    name: "ASRock-Z790-Steel-Legend-MB3",
+    name: "ASRock-Z790-Steel-Legend",
     price: 26899,
     category: "mb",
     quantity: 1,
@@ -76,7 +76,7 @@ export const motherboardProducts = [
   {
     id: 9,
     imgLink: "https://i.ibb.co/BHp45Fw/ASRock-Z790-Taichi-Lite-MB2.png",
-    name: "ASRock-Z790-Taichi-Lite-MB2",
+    name: "ASRock-Z790-Taichi-Lite",
     price: 25899,
     category: "mb",
     quantity: 1,
@@ -84,7 +84,7 @@ export const motherboardProducts = [
   {
     id: 10,
     imgLink: "https://i.ibb.co/42ZNwGP/Asus-Prime-H610-M-A-D4-MB7.png",
-    name: "Asus-Prime-H610-M-A-D4-MB7",
+    name: "Asus-Prime-H610-M-A-D4",
     price: 38000,
     category: "mb",
     quantity: 1,
@@ -93,7 +93,7 @@ export const motherboardProducts = [
     id: 11,
     imgLink:
       "https://i.ibb.co/2ZBW8Xp/Asus-ROG-Strix-B660-I-Gaming-WIFI-MB6.png",
-    name: "Asus-ROG-Strix-B660-I-Gaming-WIFI-MB6",
+    name: "Asus-ROG-Strix-B660-I-Gaming-WIFI",
     price: 68000,
     category: "mb",
     quantity: 1,
@@ -102,7 +102,7 @@ export const motherboardProducts = [
     id: 12,
     imgLink:
       "https://i.ibb.co/FXqyV7C/Gigabyte-Z690-I-Aorus-Ultra-Plus-MB4.png",
-    name: "Gigabyte-Z690-I-Aorus-Ultra-Plus-MB4",
+    name: "Gigabyte-Z690-I-Aorus-Ultra-Plus",
     price: 58500,
     category: "mb",
     quantity: 1,
@@ -110,7 +110,7 @@ export const motherboardProducts = [
   {
     id: 13,
     imgLink: "https://i.ibb.co/r7WxNV3/Gigabyte-Z790-Aorus-Xtreme-MB1.png",
-    name: "Gigabyte-Z790-Aorus-Xtreme-MB1",
+    name: "Gigabyte-Z790-Aorus-Xtreme",
     price: 124000,
     category: "mb",
     quantity: 1,
@@ -118,7 +118,7 @@ export const motherboardProducts = [
   {
     id: 14,
     imgLink: "https://i.ibb.co/rf3hF3f/MSI-MAG-B760-M-Mortar-Wi-Fi-MB5.png",
-    name: "MSI-MAG-B760-M-Mortar-Wi-Fi-MB5",
+    name: "MSI-MAG-B760-M-Mortar-Wi-Fi",
     price: 79000,
     category: "mb",
     quantity: 1,
@@ -128,7 +128,7 @@ export const motherboardProducts = [
 export const processorProducts = [
   {
     id: 15,
-    imgLink: "https://i.ibb.co/1sQ4TQ1/AMD-7-3700-X-P7.png",
+    imgLink: "https://i.ibb.co/1sQ4TQ1/AMD-7-3700.png",
     name: "AMD-7-3700-X-P7",
     price: 58500,
     category: "processor",
@@ -136,7 +136,7 @@ export const processorProducts = [
   },
   {
     id: 16,
-    imgLink: "https://i.ibb.co/wSgbtrp/AMD-Ryzen-5-7600-X-P2.png",
+    imgLink: "https://i.ibb.co/wSgbtrp/AMD-Ryzen-5-7600.png",
     name: "AMD-Ryzen-5-7600-X-P2",
     price: 80000,
     category: "processor",
@@ -144,7 +144,7 @@ export const processorProducts = [
   },
   {
     id: 17,
-    imgLink: "https://i.ibb.co/Dg7cQvR/AMD-Ryzen-7-5800-X3-D-P5.png",
+    imgLink: "https://i.ibb.co/Dg7cQvR/AMD-Ryzen-7-5800-X3.png",
     name: "AMD-Ryzen-7-5800-X3-D-P5",
     price: 79500,
     category: "processor",
@@ -152,7 +152,7 @@ export const processorProducts = [
   },
   {
     id: 21,
-    imgLink: "https://i.ibb.co/Lt0btnX/Intel-Core-i9-13900-K-P3.png",
+    imgLink: "https://i.ibb.co/Lt0btnX/Intel-Core-i9-13900.png",
     name: "Intel-Core-i9-13900-K-P3",
     price: 182000,
     category: "processor",
@@ -160,7 +160,7 @@ export const processorProducts = [
   },
   {
     id: 18,
-    imgLink: "https://i.ibb.co/DQQxtqG/AMD-Ryzen-9-7950-X3-D-P4.png",
+    imgLink: "https://i.ibb.co/DQQxtqG/AMD-Ryzen-9-7950.png",
     name: "AMD-Ryzen-9-7950-X3-D-P4",
     price: 170000,
     category: "processor",
@@ -168,7 +168,7 @@ export const processorProducts = [
   },
   {
     id: 19,
-    imgLink: "https://i.ibb.co/KsyWrVk/Intel-Core-i5-11600-K-P6.png",
+    imgLink: "https://i.ibb.co/KsyWrVk/Intel-Core-i5-11600.png",
     name: "Intel-Core-i5-11600-K-P6",
     price: 54000,
     category: "processor",
@@ -176,10 +176,128 @@ export const processorProducts = [
   },
   {
     id: 20,
-    imgLink: "https://i.ibb.co/w7FRFcq/Intel-Core-i7-13700-K-P1.png",
+    imgLink: "https://i.ibb.co/w7FRFcq/Intel-Core-i7-13700.png",
     name: "Intel-Core-i7-13700-K-P1",
     price: 123000,
     category: "processor",
+    quantity: 1,
+  },
+];
+
+export const ramsProducts = [
+  {
+    id: 22,
+    imgLink: "https://i.ibb.co/QQnFb1g/Adata-Spectrix-D80.png",
+    name: "Adata-Spectrix-D80-RAM6",
+    price: 8500,
+    category: "ram",
+    quantity: 1,
+  },
+  {
+    id: 23,
+    imgLink: "https://i.ibb.co/bH2NW8h/Corsair-Dominator-Platinum-RGB.png",
+    name: "Corsair-Dominator-Platinum-RGB-RAM3",
+    price: 36099,
+    category: "ram",
+    quantity: 1,
+  },
+  {
+    id: 24,
+    imgLink: "https://i.ibb.co/hZGJNcV/Corsair-Vengeance-LED.png",
+    name: "Corsair-Vengeance-LED-RAM1",
+    price: 9000,
+    category: "ram",
+    quantity: 1,
+  },
+  {
+    id: 25,
+    imgLink: "https://i.ibb.co/Gk4T646/G-Skill-Trident-Z-RGB-DC.png",
+    name: "G-Skill-Trident-Z-RGB-DC-RAM5",
+    price: 19500,
+    category: "ram",
+    quantity: 1,
+  },
+  {
+    id: 26,
+    imgLink: "https://i.ibb.co/1nhMdgM/G-Skill-Trident-Z-Royal.png",
+    name: "G-Skill-Trident-Z-Royal-RAM7",
+    price: 32599,
+    category: "ram",
+    quantity: 1,
+  },
+  {
+    id: 27,
+    imgLink: "https://i.ibb.co/xjGqsVr/Hyper-X-Fury-Beast-RGB.png",
+    name: "Hyper-X-Fury-Beast-RGB-RAM4",
+    price: 13500,
+    category: "ram",
+    quantity: 1,
+  },
+  {
+    id: 28,
+    imgLink: "https://i.ibb.co/pLhKw57/Kingston-Hyper-X-Fury.png",
+    name: "Kingston-Hyper-X-Fury-RAM2",
+    price: 7899,
+    category: "ram",
+    quantity: 1,
+  },
+];
+
+export const ssdProducts = [
+  {
+    id: 29,
+    imgLink: "https://i.ibb.co/Vgh9MyY/Crucial-P3-SSD4.png",
+    name: "Crucial-P3",
+    price: 18000,
+    category: "ssd",
+    quantity: 1,
+  },
+  {
+    id: 30,
+    imgLink: "https://i.ibb.co/9h0sVRr/Crucial-P5-Plus-SSD6.png",
+    name: "Crucial-P5-Plus",
+    price: 21699,
+    category: "ssd",
+    quantity: 1,
+  },
+  {
+    id: 31,
+    imgLink: "https://i.ibb.co/7VR7YVj/Crucial-T700-SSD3.png",
+    name: "Crucial-T700",
+    price: 11599,
+    category: "ssd",
+    quantity: 1,
+  },
+  {
+    id: 32,
+    imgLink: "https://i.ibb.co/K7d8z53/Sabrent-Rocket-2230-SSD5.png",
+    name: "Sabrent-Rocket-2230",
+    price: 54092,
+    category: "ssd",
+    quantity: 1,
+  },
+  {
+    id: 33,
+    imgLink: "https://i.ibb.co/gd7qL6T/Samsung-990-Pro-SSD1.png",
+    name: "Samsung-990-Pro",
+    price: 42500,
+    category: "ssd",
+    quantity: 1,
+  },
+  {
+    id: 34,
+    imgLink: "https://i.ibb.co/Cm63TMQ/SK-hynix-Gold-P31-SSD7.png",
+    name: "SK-hynix-Gold-P31",
+    price: 29589,
+    category: "ssd",
+    quantity: 1,
+  },
+  {
+    id: 35,
+    imgLink: "https://i.ibb.co/5TVYCvz/WD-Black-SN850-X-SSD2.png",
+    name: "WD-Black-SN850",
+    price: 32990,
+    category: "ssd",
     quantity: 1,
   },
 ];

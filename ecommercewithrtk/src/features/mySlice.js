@@ -93,6 +93,10 @@ export const eStoreSlice = createSlice({
           state.userData[i].password === action.payload.password
         ) {
           state.isLogin = true;
+          alert("Login Successsul");
+        }
+        else{
+          console.log("Error")
         }
       }
     },
