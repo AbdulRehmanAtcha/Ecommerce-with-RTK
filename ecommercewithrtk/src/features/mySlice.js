@@ -83,6 +83,9 @@ export const eStoreSlice = createSlice({
     logout: (state) => {
       state.isLogin = false;
     },
+    confirmOrder: (state) => {
+      state.cart.length = 0;
+    },
   },
 });
 
@@ -95,6 +98,7 @@ export const {
   signup,
   login,
   logout,
+  confirmOrder,
 } = eStoreSlice.actions;
 
 export default eStoreSlice.reducer;

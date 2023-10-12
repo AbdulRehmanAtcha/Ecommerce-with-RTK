@@ -115,7 +115,7 @@ export default function Cart() {
                                 borderRadius: "4px",
                                 border: "none",
                                 height: "35px",
-                                marginRight:"10px"
+                                marginRight: "10px",
                               }}
                               onClick={() => dispatch(decrement(eachProduct))}
                             >
@@ -195,9 +195,11 @@ export default function Cart() {
                       </MDBListGroupItem>
                     </MDBListGroup>
 
-                    <MDBBtn block size="lg" className="mt-3">
-                      Go to checkout
-                    </MDBBtn>
+                    <NavLink to={"/checkout"}>
+                      <MDBBtn block size="lg" className="mt-3">
+                        Go to checkout
+                      </MDBBtn>
+                    </NavLink>
                     <NavLink to={"/"}>
                       <MDBBtn block size="lg" className="mt-3">
                         Continue Shopping
