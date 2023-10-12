@@ -1,11 +1,15 @@
 * {
   margin: 0;
+  /* overflow-x: hidden; */
   padding: 0;
+}
+*::-webkit-scrollbar {
+  display: none; /* Hide vertical scrollbar for Webkit browsers */
 }
 :root {
   --navback: #001f3f;
   --fontBasicColor: #ffffff;
-  --mainBg: #00001D;
+  --mainBg: #00001d;
 }
 .section-title {
   display: flex;
@@ -14,6 +18,7 @@
   background-color: var(--mainBg);
   color: var(--fontBasicColor);
   padding-top: 20px;
+  flex-direction: column;
 }
 .section-title h1 {
   color: #ffffff00;
@@ -26,8 +31,8 @@
   text-align: center;
   text-transform: uppercase;
 }
-@media screen and (max-width:590px) {
-  .section-title h1{
+@media screen and (max-width: 590px) {
+  .section-title h1 {
     font-size: 2rem;
   }
 }

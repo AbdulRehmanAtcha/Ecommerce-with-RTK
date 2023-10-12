@@ -46,7 +46,7 @@ export default function Cart() {
           <img src="https://i.imgur.com/dCdflKN.png" alt="" />
           <h2>Your Cart Is Empty</h2>
           <h2>Add Products To Make Me Happy</h2>
-          <NavLink to={"/products"}>
+          <NavLink to={"/"}>
             <MDBBtn block size="lg" className="mt-3">
               Continue Shopping
             </MDBBtn>
@@ -198,7 +198,7 @@ export default function Cart() {
                     <MDBBtn block size="lg" className="mt-3">
                       Go to checkout
                     </MDBBtn>
-                    <NavLink to={"/products"}>
+                    <NavLink to={"/"}>
                       <MDBBtn block size="lg" className="mt-3">
                         Continue Shopping
                       </MDBBtn>

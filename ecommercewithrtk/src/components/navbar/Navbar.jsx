@@ -13,12 +13,14 @@ import {
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import "./navbar.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { logout } from "../../features/mySlice";
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
-  const { cart } = useSelector((data) => data.name);
+  const { cart, isLogin } = useSelector((data) => data.name);
+  const dispatch = useDispatch();
 
   return (
     <MDBNavbar
@@ -27,7 +29,7 @@ export default function App() {
       style={{ backgroundColor: "black" }}
     >
       <MDBContainer fluid>
-        <MDBNavbarBrand href="#" style={{ color: "white" }}>
+        <MDBNavbarBrand href="/" style={{ color: "white" }}>
           <img
             src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/968/8639054968_74b0afe5-14da-4bba-b858-08fb7807eae7.png?cb=1697099780"
             alt="Logo"
@@ -81,6 +83,28 @@ export default function App() {
               </MDBNavbarLink>
             </MDBNavbarItem> */}
           </MDBNavbarNav>
+          {isLogin ? (
+            <NavLink to={"/login"}>
+              <Button
+                variant="light"
+                className="cart-button"
+                style={{ marginRight: "10px" }}
+                onClick={() => dispatch(logout())}
+              >
+                Logout
+              </Button>
+            </NavLink>
+          ) : (
+            <NavLink to={"/login"}>
+              <Button
+                variant="light"
+                className="cart-button"
+                style={{ marginRight: "10px" }}
+              >
+                Login
+              </Button>
+            </NavLink>
+          )}
           <NavLink to="/cart">
             <Button variant="light" className="cart-button">
               Cart{" "}

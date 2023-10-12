@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./form.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../../features/mySlice";
 import { NavLink, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -11,10 +13,12 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [cPass, setCPass] = useState("");
 
+  const { userData } = useSelector((data) => data.name);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const userData = {
+  const userData2 = {
     name: name,
     email: email,
     phone: phone,
@@ -31,21 +35,57 @@ const SignUp = () => {
 
   const SignupHandler = (event) => {
     event.preventDefault();
+    let isFOund = false;
     if (password !== cPass) {
       alert("Password Didn't Match");
     } else {
-      console.log(name);
-      console.log(email);
-      console.log(phone);
-      console.log(password);
-      console.log(cPass);
-      setName("");
-      setEmail("");
-      setPhone("");
-      setPassword("");
-      setCPass("");
-      dispatch(signup(userData));
-      navigate("/login");
+      for (var i = 0; i < userData.length; i++) {
+        if (userData[i].email === userData2.email) {
+          isFOund = true;
+          toast.error("Email Already Registered!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      }
+      if (!isFOund) {
+        setName("");
+        setEmail("");
+        setPhone("");
+        setPassword("");
+        setCPass("");
+        dispatch(signup(userData2));
+        navigate("/login");
+      }
+
+      // if (filter < 0) {
+      //   dispatch(signup(userData2));
+      //   setName("");
+      //   setEmail("");
+      //   setPhone("");
+      //   setPassword("");
+      //   setCPass("");
+      // } else {
+      //   alert("Email Already Registered");
+      // }
+      // console.log(name);
+      // console.log(email);
+      // console.log(phone);
+      // console.log(password);
+      // console.log(cPass);
+      // setName("");
+      // setEmail("");
+      // setPhone("");
+      // setPassword("");
+      // setCPass("");
+      // dispatch(signup(userData));
+      // navigate("/login");
     }
   };
   return (
@@ -114,6 +154,7 @@ const SignUp = () => {
           <NavLink to={"/login"}>Login Here</NavLink>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

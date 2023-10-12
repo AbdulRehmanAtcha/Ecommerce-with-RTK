@@ -3,6 +3,8 @@ import "./form.css";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../features/mySlice";
 import { NavLink, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -11,24 +13,43 @@ const Signin = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isLogin } = useSelector((data) => data.name);
+  const { isLogin, userData } = useSelector((data) => data.name);
 
   useEffect(() => {
     if (isLogin === true) {
-      navigate("/home");
+      navigate("/");
     }
   }, [isLogin, navigate]);
 
-  const userData = {
-    email: email,
-    password: password,
-  };
+  // const userData = {
+  //   email: email,
+  //   password: password,
+  // };
 
   const LoginHandler = (event) => {
     event.preventDefault();
-    dispatch(login(userData));
-    setEmail("");
-    setPassword("");
+    let isFound = false;
+    // dispatch(login(userData));
+    for (var i = 0; i < userData.length; i++) {
+      if (userData[i].email === email && userData[i].password === password) {
+        dispatch(login());
+        setEmail("");
+        setPassword("");
+        isFound = true;
+      }
+    }
+    if (!isFound) {
+      toast.error("Invalid Email or Password!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
   };
   return (
     <div className="form-main">
@@ -66,6 +87,7 @@ const Signin = () => {
           <NavLink to={"/register"}>Create Here</NavLink>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

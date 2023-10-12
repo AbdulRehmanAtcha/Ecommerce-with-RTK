@@ -75,30 +75,13 @@ export const eStoreSlice = createSlice({
       }
     },
     signup: (state, action) => {
-      const filter = state.userData.findIndex(
-        (item) => item.email === action.payload.email
-      );
-      if (filter < 0) {
-        state.isRegister = true;
-        state.userData.push(action.payload);
-      } else {
-        alert("Email Already Registered");
-        state.isRegister = false;
-      }
+      state.userData.push(action.payload);
     },
-    login: (state, action) => {
-      for (var i = 0; i < state.userData.length; i++) {
-        if (
-          state.userData[i].email === action.payload.email &&
-          state.userData[i].password === action.payload.password
-        ) {
-          state.isLogin = true;
-          alert("Login Successsul");
-        }
-        else{
-          console.log("Error")
-        }
-      }
+    login: (state) => {
+      state.isLogin = true;
+    },
+    logout: (state) => {
+      state.isLogin = false;
     },
   },
 });
@@ -111,6 +94,7 @@ export const {
   decrement,
   signup,
   login,
+  logout,
 } = eStoreSlice.actions;
 
 export default eStoreSlice.reducer;
