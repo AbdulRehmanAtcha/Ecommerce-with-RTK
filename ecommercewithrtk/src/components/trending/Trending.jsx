@@ -2,7 +2,7 @@ import React from "react";
 import "./trending.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,20 +13,20 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { trendingProducts } from "../../constants";
 import { addToCart } from "../../features/mySlice";
 import numeral from "numeral";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Trending = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const { isLogin } = useSelector((data) => data.name);
+  // const { isLogin } = useSelector((data) => data.name);
 
   const AddToCartHandler = (obj) => {
-    if (isLogin === false) {
-      navigate("/modal");
-    } else {
-      dispatch(addToCart(obj));
-    }
+    // if (isLogin === false) {
+    //   navigate("/modal");
+    // } else {
+    // }
+    dispatch(addToCart(obj));
   };
 
   return (

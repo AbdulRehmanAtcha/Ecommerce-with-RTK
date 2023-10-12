@@ -15,7 +15,7 @@ import {
 } from "mdb-react-ui-kit";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   decrement,
   deleteProduct,
@@ -26,10 +26,21 @@ import numeral from "numeral";
 
 export default function Cart() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { isLogin } = useSelector((data) => data.name);
+
   const { cart, totalPrice } = useSelector((data) => data.name);
   useEffect(() => {
     dispatch(getCartTotal());
   }, [cart, dispatch]);
+
+  const CheckOutChecker = () => {
+    if (isLogin === false) {
+      navigate("/modal");
+    } else {
+      navigate("/checkout");
+    }
+  };
   return (
     <>
       {cart.length === 0 ? (
@@ -195,11 +206,13 @@ export default function Cart() {
                       </MDBListGroupItem>
                     </MDBListGroup>
 
-                    <NavLink to={"/checkout"}>
+                    {/* <NavLink to={"/checkout"}> */}
+                    <button onClick={CheckOutChecker} style={{width:"100%", border:"none", background:"transparent"}}>
                       <MDBBtn block size="lg" className="mt-3">
                         Go to checkout
                       </MDBBtn>
-                    </NavLink>
+                    </button>
+                    {/* </NavLink> */}
                     <NavLink to={"/"}>
                       <MDBBtn block size="lg" className="mt-3">
                         Continue Shopping
