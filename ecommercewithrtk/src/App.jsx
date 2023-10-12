@@ -9,6 +9,7 @@ import Cart from "./components/cardsfolder/Cart";
 import Packet from "./components/Packet";
 import Modal2 from "./components/Modal";
 import { useSelector } from "react-redux";
+import Checkout from "./components/forms/Checkout";
 
 function App() {
   const location = useLocation();
@@ -37,9 +38,11 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/modal" element={<Modal2 />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Packet />} />
         </Routes>
       )}
+      {/* <Checkout /> */}
       {/* <Packet />
       <OurBrands />
       <Reviews /> */}

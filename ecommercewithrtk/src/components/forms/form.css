@@ -6,7 +6,8 @@
   align-items: center;
 }
 .signup-main,
-.sigin-main {
+.sigin-main,
+.check-main {
   width: 25vw;
   min-height: 30vh;
   border-radius: 8px;
@@ -16,25 +17,31 @@
 }
 .signup-main h1,
 .sigin-main h1,
+.check-main h1,
 .signup-main a,
-.sigin-main a {
+.sigin-main a,
+.check-main a {
   text-align: center;
   color: white;
 }
 .sigin-main a:hover,
-.signup-main a:hover {
+.signup-main a:hover,
+.check-main a:hover {
   color: white;
 }
 .signup-main h2,
 .sigin-main h2,
+.check-main h2,
 .signup-main h5,
-.sigin-main h5 {
+.sigin-main h5,
+.check-main h5 {
   text-align: center;
   font-size: 19px;
   color: #1fc5ad;
 }
 .signup-main form,
-.sigin-main form {
+.sigin-main form,
+.check-main form {
   width: 100%;
   height: 70%;
   display: flex;
@@ -44,16 +51,19 @@
   align-items: center;
 }
 .signup-main form div,
-.sigin-main form div {
+.sigin-main form div,
+.check-main form div {
   width: 100%;
   margin-left: 49px;
 }
 .signup-main form label,
-.sigin-main form label {
+.sigin-main form label,
+.check-main form label {
   color: #1fc5ad;
 }
 .signup-main form input,
-.sigin-main form input {
+.sigin-main form input,
+.check-main form input {
   height: 40px;
   width: 89%;
   background: transparent;
@@ -63,7 +73,8 @@
   padding: 10px;
 }
 .signup-main form button,
-.sigin-main form button {
+.sigin-main form button,
+.check-main form button {
   height: 40px;
   width: 90%;
   background-color: #1fc5ad;
@@ -72,11 +83,13 @@
 }
 @media screen and (max-width: 535px) {
   .signup-main,
-  .sigin-main {
+  .sigin-main,
+  .check-main {
     width: 95vw;
   }
   .signup-main form input,
-  .sigin-main form input {
+  .sigin-main form input,
+  .check-main form input {
     width: 89%;
   }
   .form-main {
@@ -85,21 +98,25 @@
 }
 @media screen and (min-width: 534px) and (max-width: 991px) {
   .signup-main,
-  .sigin-main {
+  .sigin-main,
+  .check-main {
     width: 55vw;
   }
   .signup-main form input,
-  .sigin-main form input {
+  .sigin-main form input,
+  .check-main form input {
     width: 89%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1919px) {
   .signup-main,
-  .sigin-main {
+  .sigin-main,
+  .check-main {
     width: 45vw;
   }
   .signup-main form input,
-  .sigin-main form input {
+  .sigin-main form input,
+  .check-main form input {
     width: 89%;
   }
 }
