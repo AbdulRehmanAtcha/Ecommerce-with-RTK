@@ -15,6 +15,7 @@ import {
   BiLogoLinkedin,
 } from "react-icons/bi";
 import "./packet.css";
+import GraphicCards from "./graphics/GraphicsCard";
 
 const Packet = () => {
   return (
@@ -26,6 +27,8 @@ const Packet = () => {
       <Trending />
       <div style={{ height: "3px", backgroundColor: "#a6a4a1" }}></div>
       <Motherboard />
+      <div style={{ height: "3px", backgroundColor: "#a6a4a1" }}></div>
+      <GraphicCards />
       <div style={{ height: "3px", backgroundColor: "#a6a4a1" }}></div>
       <Processor />
       <div style={{ height: "3px", backgroundColor: "#a6a4a1" }}></div>

@@ -301,3 +301,69 @@ export const ssdProducts = [
     quantity: 1,
   },
 ];
+
+export const graphicCardsProducts = [
+  {
+    id: 36,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/04/geforce-ada-rtx4070-back.png?q=50&fit=contain&w=480&h=480&dpr=1.5",
+    name: "Nvidia GeForce RTX 4070",
+    price: 210000,
+    category: "gc",
+    quantity: 1,
+  },
+  {
+    id: 37,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/02/amd-radeon-rx-7900-xtx-product-trans.png?q=50&fit=crop&w=480&dpr=1.5",
+    name: "AMD Radeon RX 7900 XTX",
+    price: 355000,
+    category: "gc",
+    quantity: 1,
+  },
+  {
+    id: 38,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/02/intel-arc-a770-le-product-trans.png?q=50&fit=crop&w=480&dpr=1.5",
+    name: "Intel Arc A770 Limited Edition",
+    price: 91631,
+    category: "gc",
+    quantity: 1,
+  },
+  {
+    id: 39,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/02/nvidia-geforce-rtx-4090-product-trans.png?q=50&fit=crop&w=480&dpr=1.5",
+    name: "Nvidia RTX 4090 Founders Edition",
+    price: 417771,
+    category: "gc",
+    quantity: 1,
+  },
+  {
+    id: 40,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/02/nvidia-geforce-rtx-3060-ti-product-trans.png?q=50&fit=crop&w=480&dpr=1.5",
+    name: "NVIDIA GeForce RTX 3060 Ti",
+    price: 135000,
+    category: "gc",
+    quantity: 1,
+  },
+  {
+    id: 41,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/08/gigabyte-radeon-rx-7600-gaming-oc-windforce-product.png?q=50&fit=crop&w=480&dpr=1.5",
+    name: "AMD Radeon RX 7600",
+    price: 75198,
+    category: "gc",
+    quantity: 1,
+  },
+  {
+    id: 41,
+    imgLink:
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/03/gigiabyte-rtx-3070-gaming-oc-gpu-product.png?q=50&fit=crop&w=480&dpr=1.5",
+    name: "NVIDIA GeForce RTX 3070",
+    price: 135583,
+    category: "gc",
+    quantity: 1,
+  },
+];
