@@ -5,10 +5,12 @@ import { login } from "../../features/mySlice";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPass, setShowPass] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -76,11 +78,20 @@ const Signin = () => {
             <label htmlFor="password">Password</label>
             <br />
             <input
-              type="password"
+              type={showPass ? "text" : "password"}
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            {password.length > 0 ? (
+              <span onClick={() => setShowPass(!showPass)}>
+                {showPass ? (
+                  <AiFillEyeInvisible color="white" size={25} />
+                ) : (
+                  <AiFillEye color="white" size={25} />
+                )}
+              </span>
+            ) : null}
           </div>
           <button type="submit">Register</button>
           <h5>Not Have An Account?</h5>

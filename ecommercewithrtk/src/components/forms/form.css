@@ -55,6 +55,13 @@
 .check-main form div {
   width: 100%;
   margin-left: 49px;
+  position: relative;
+}
+.signup-main form div span, .sigin-main form div span {
+  top: 30px;
+  right: 68px;
+  position: absolute;
+  cursor: pointer;
 }
 .signup-main form label,
 .sigin-main form label,

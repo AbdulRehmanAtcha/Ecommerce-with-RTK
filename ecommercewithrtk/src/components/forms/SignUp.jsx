@@ -5,6 +5,7 @@ import { signup } from "../../features/mySlice";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -12,6 +13,8 @@ const SignUp = () => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [cPass, setCPass] = useState("");
+  const [showPass, setShowPass] = useState(false);
+  const [showCPass, setShowCPass] = useState(false);
 
   const { userData } = useSelector((data) => data.name);
 
@@ -133,21 +136,39 @@ const SignUp = () => {
             <label htmlFor="password">Password</label>
             <br />
             <input
-              type="password"
+              type={showPass ? "text" : "password"}
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            {password.length > 0 ? (
+              <span onClick={() => setShowPass(!showPass)}>
+                {showPass ? (
+                  <AiFillEyeInvisible color="white" size={25} />
+                ) : (
+                  <AiFillEye color="white" size={25} />
+                )}
+              </span>
+            ) : null}
           </div>
           <div>
             <label htmlFor="cpassword">Confirm Password</label>
             <br />
             <input
-              type="password"
+              type={showCPass ? "text" : "password"}
               id="cpassword"
               value={cPass}
               onChange={(e) => setCPass(e.target.value)}
             />
+            {cPass.length > 0 ? (
+              <span onClick={() => setShowCPass(!showCPass)}>
+                {showCPass ? (
+                  <AiFillEyeInvisible color="white" size={25} />
+                ) : (
+                  <AiFillEye color="white" size={25} />
+                )}
+              </span>
+            ) : null}
           </div>
           <button type="submit">Register</button>
           <h5>Already Have An Account?</h5>
