@@ -27,6 +27,7 @@ function App() {
           <Route path="/home" element={<Packet />} />
           <Route path="/login" element={<Signin />} />
           <Route path="/register" element={<SignUp />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/modal" element={<Modal2 />} />
           <Route path="*" element={<Packet />} />
         </Routes>

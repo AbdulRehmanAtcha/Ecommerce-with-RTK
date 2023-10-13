@@ -13,10 +13,10 @@ const Checkout = () => {
     event.preventDefault();
     toast.success("Confirmed. You will receive email shortly", {
       position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
+      autoClose: 2000,
+      hideProgressBar: true,
       closeOnClick: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
       draggable: true,
       progress: undefined,
       theme: "dark",

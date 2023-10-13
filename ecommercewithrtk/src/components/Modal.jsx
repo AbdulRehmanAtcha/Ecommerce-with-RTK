@@ -21,7 +21,7 @@ function Modal2() {
           Please Login First <br /> <NavLink to={"/login"}>Click Here</NavLink>
         </Modal.Body>
         <Modal.Footer>
-          <NavLink to={"/home"}>
+          <NavLink to={"/"}>
             <Button variant="primary" onClick={handleClose}>
               Back to Home
             </Button>
