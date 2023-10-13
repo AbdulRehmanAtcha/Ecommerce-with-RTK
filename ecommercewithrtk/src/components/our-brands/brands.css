@@ -56,6 +56,12 @@
 .features-card p {
   text-align: center;
 }
+.features-card h2{
+  font-family: var(--mainFont);
+}
+.features-card p{
+  font-family: var(--paraFont);
+}
 @media screen and (max-width: 767px) {
   .our-features {
     flex-direction: column;

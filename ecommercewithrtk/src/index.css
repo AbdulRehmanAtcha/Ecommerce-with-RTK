@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 * {
   margin: 0;
   /* overflow-x: hidden; */
@@ -10,6 +12,8 @@
   --navback: #001f3f;
   --fontBasicColor: #ffffff;
   --mainBg: #00001d;
+  --mainFont: "Titillium Web", sans-serif;
+  --paraFont: 'Gabarito', sans-serif;;
 }
 .section-title {
   display: flex;

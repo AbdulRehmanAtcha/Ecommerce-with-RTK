@@ -34,6 +34,11 @@
 .swiper-slide h1 {
   font-size: 20px !important;
   text-align: center;
+  font-family: var(--mainFont);
+  font-weight: 600;
+}
+.swiper-slide h2{
+  font-family: var(--paraFont) !important;
 }
 .swiper-slide img {
   width: 50% !important;

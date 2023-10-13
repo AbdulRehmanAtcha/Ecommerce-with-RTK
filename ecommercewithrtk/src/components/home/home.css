@@ -29,6 +29,8 @@
 .home-content-left h1 {
   font-size: 50px;
   height: 50px;
+  font-family: var(--mainFont);
+  font-weight: 600;
 }
 .home-content-right img {
   animation: moveImage 5s linear infinite;
