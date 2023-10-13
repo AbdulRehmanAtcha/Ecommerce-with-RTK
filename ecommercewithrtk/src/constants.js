@@ -129,7 +129,7 @@ export const processorProducts = [
   {
     id: 15,
     imgLink: "https://i.ibb.co/1sQ4TQ1/AMD-7-3700.png",
-    name: "AMD-7-3700-X-P7",
+    name: "AMD-7-3700-X",
     price: 58500,
     category: "processor",
     quantity: 1,
@@ -137,7 +137,7 @@ export const processorProducts = [
   {
     id: 16,
     imgLink: "https://i.ibb.co/wSgbtrp/AMD-Ryzen-5-7600.png",
-    name: "AMD-Ryzen-5-7600-X-P2",
+    name: "AMD-Ryzen-5-7600-X",
     price: 80000,
     category: "processor",
     quantity: 1,
@@ -145,7 +145,7 @@ export const processorProducts = [
   {
     id: 17,
     imgLink: "https://i.ibb.co/Dg7cQvR/AMD-Ryzen-7-5800-X3.png",
-    name: "AMD-Ryzen-7-5800-X3-D-P5",
+    name: "AMD-Ryzen-7-5800-X3",
     price: 79500,
     category: "processor",
     quantity: 1,
@@ -153,7 +153,7 @@ export const processorProducts = [
   {
     id: 21,
     imgLink: "https://i.ibb.co/Lt0btnX/Intel-Core-i9-13900.png",
-    name: "Intel-Core-i9-13900-K-P3",
+    name: "Intel-Core-i9-13900-K",
     price: 182000,
     category: "processor",
     quantity: 1,
@@ -161,7 +161,7 @@ export const processorProducts = [
   {
     id: 18,
     imgLink: "https://i.ibb.co/DQQxtqG/AMD-Ryzen-9-7950.png",
-    name: "AMD-Ryzen-9-7950-X3-D-P4",
+    name: "AMD-Ryzen-9-7950-X3",
     price: 170000,
     category: "processor",
     quantity: 1,
@@ -169,7 +169,7 @@ export const processorProducts = [
   {
     id: 19,
     imgLink: "https://i.ibb.co/KsyWrVk/Intel-Core-i5-11600.png",
-    name: "Intel-Core-i5-11600-K-P6",
+    name: "Intel-Core-i5-11600-K",
     price: 54000,
     category: "processor",
     quantity: 1,
@@ -177,7 +177,7 @@ export const processorProducts = [
   {
     id: 20,
     imgLink: "https://i.ibb.co/w7FRFcq/Intel-Core-i7-13700.png",
-    name: "Intel-Core-i7-13700-K-P1",
+    name: "Intel-Core-i7-13700-K",
     price: 123000,
     category: "processor",
     quantity: 1,
@@ -188,7 +188,7 @@ export const ramsProducts = [
   {
     id: 22,
     imgLink: "https://i.ibb.co/QQnFb1g/Adata-Spectrix-D80.png",
-    name: "Adata-Spectrix-D80-RAM6",
+    name: "Adata-Spectrix-D80",
     price: 8500,
     category: "ram",
     quantity: 1,
@@ -196,7 +196,7 @@ export const ramsProducts = [
   {
     id: 23,
     imgLink: "https://i.ibb.co/bH2NW8h/Corsair-Dominator-Platinum-RGB.png",
-    name: "Corsair-Dominator-Platinum-RGB-RAM3",
+    name: "Corsair-Dominator-Platinum-RGB",
     price: 36099,
     category: "ram",
     quantity: 1,
@@ -204,7 +204,7 @@ export const ramsProducts = [
   {
     id: 24,
     imgLink: "https://i.ibb.co/hZGJNcV/Corsair-Vengeance-LED.png",
-    name: "Corsair-Vengeance-LED-RAM1",
+    name: "Corsair-Vengeance-LED",
     price: 9000,
     category: "ram",
     quantity: 1,
@@ -212,7 +212,7 @@ export const ramsProducts = [
   {
     id: 25,
     imgLink: "https://i.ibb.co/Gk4T646/G-Skill-Trident-Z-RGB-DC.png",
-    name: "G-Skill-Trident-Z-RGB-DC-RAM5",
+    name: "G-Skill-Trident-Z-RGB-DC",
     price: 19500,
     category: "ram",
     quantity: 1,
@@ -220,7 +220,7 @@ export const ramsProducts = [
   {
     id: 26,
     imgLink: "https://i.ibb.co/1nhMdgM/G-Skill-Trident-Z-Royal.png",
-    name: "G-Skill-Trident-Z-Royal-RAM7",
+    name: "G-Skill-Trident-Z-Royal",
     price: 32599,
     category: "ram",
     quantity: 1,
@@ -228,7 +228,7 @@ export const ramsProducts = [
   {
     id: 27,
     imgLink: "https://i.ibb.co/xjGqsVr/Hyper-X-Fury-Beast-RGB.png",
-    name: "Hyper-X-Fury-Beast-RGB-RAM4",
+    name: "Hyper-X-Fury-Beast-RGB",
     price: 13500,
     category: "ram",
     quantity: 1,
@@ -236,7 +236,7 @@ export const ramsProducts = [
   {
     id: 28,
     imgLink: "https://i.ibb.co/pLhKw57/Kingston-Hyper-X-Fury.png",
-    name: "Kingston-Hyper-X-Fury-RAM2",
+    name: "Kingston-Hyper-X-Fury",
     price: 7899,
     category: "ram",
     quantity: 1,

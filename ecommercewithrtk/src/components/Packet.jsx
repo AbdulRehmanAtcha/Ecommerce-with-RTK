@@ -45,16 +45,16 @@ const Packet = () => {
           Develop By <span style={{ color: "red" }}>Abdul Rehman</span>
         </h2>
         <div>
-          <a href="https://www.facebook.com/arehman9091/">
+          <a href="https://www.facebook.com/arehman9091/" target="__blank">
             <BiLogoFacebook color="white" size={25} />
           </a>
-          <a href="https://www.instagram.com/abdulrehmanzaid/">
+          <a href="https://www.instagram.com/abdulrehmanzaid/" target="__blank">
             <BiLogoInstagram color="white" size={25} />
           </a>
-          <a href="https://github.com/AbdulRehmanAtcha">
+          <a href="https://github.com/AbdulRehmanAtcha" target="__blank">
             <BiLogoGithub color="white" size={25} />
           </a>
-          <a href="https://www.linkedin.com/in/abdul-rehman-1b8a69230/">
+          <a href="https://www.linkedin.com/in/abdul-rehman-1b8a69230/" target="__blank">
             <BiLogoLinkedin color="white" size={25} />
           </a>
         </div>
