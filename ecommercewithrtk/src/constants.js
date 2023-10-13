@@ -54,7 +54,7 @@ export const trendingProducts = [
     quantity: 1,
   },
   {
-    id: 6,
+    id: 7,
     imgLink:
       "https://zestrogaming.com/wp-content/uploads/2022/11/Cruch-Front-618x618.png",
     name: "Loki 1.4 – Core i5 12400F & GTX 1660 Super",
@@ -358,7 +358,7 @@ export const graphicCardsProducts = [
     quantity: 1,
   },
   {
-    id: 41,
+    id: 42,
     imgLink:
       "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/03/gigiabyte-rtx-3070-gaming-oc-gpu-product.png?q=50&fit=crop&w=480&dpr=1.5",
     name: "NVIDIA GeForce RTX 3070",
